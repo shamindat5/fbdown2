@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast Downloader - Secure & Free File Downloads</title>
+  <meta name="description" content="Quickly download files safely with our fast, free downloader. No sign-up required.">
+  <meta name="keywords" content="downloader, free download, fast download, secure file download">
+  <meta name="author" content="Fast Downloader Team">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Fast Downloader - Secure & Free File Downloads">
+  <meta property="og:description" content="Quickly download files safely with our fast, free downloader. No sign-up required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-github-username.github.io">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬇️</text></svg>">
+
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    /* Card */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.6s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Spinner */
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .status {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      min-height: 24px;
+    }
+
+    .countdown {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .redirect-info {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 360px) {
+      .card {
+        padding: 32px 24px;
+      }
+      .card h1 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Preparing your download</h1>
+    <div class="spinner" aria-hidden="true"></div>
+    <p class="status">Please wait...</p>
+    <div class="countdown" id="countdown">3</div>
+    <p class="redirect-info">You will be redirected shortly</p>
+  </main>
+
+  <script>
+    (function(){
+      const countdownEl = document.getElementById('countdown');
+      let t = 3;
+      const target = 'https://www.effectivegatecpm.com/ssid21ky6k?key=ee8765e743c0dbbfae372c7aae0e2cbe';
+
+      const interval = setInterval(() => {
+        t -= 1;
+        if (t > 0) {
+          countdownEl.textContent = t;
+        } else {
+          clearInterval(interval);
+          window.location.replace(target);
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
